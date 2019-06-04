@@ -1,0 +1,30 @@
+
+spring:
+  application:
+    name: macro-test-provider
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+---
+server:
+  port: 7000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka/,http://127.0.0.1:9001/eureka/
+spring:
+  profiles: dev1
+
+
+---
+server:
+  port: 7001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka/,http://127.0.0.1:9001/eureka/
+spring:
+  profiles: dev2
