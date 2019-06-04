@@ -13,7 +13,7 @@ server:
 spring:
   profiles: dev1
   application:
-    name: macro-pub-register-server
+    name: macro-pub-register-server1
 eureka:
   client:
     service-url:
@@ -25,7 +25,7 @@ server:
 spring:
   profiles: dev2
   application:
-    name: macro-pub-register-server
+    name: macro-pub-register-server2
 eureka:
   client:
     service-url:
