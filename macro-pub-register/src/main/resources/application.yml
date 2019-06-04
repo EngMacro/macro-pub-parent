@@ -11,7 +11,7 @@ eureka:
 server:
   port: 9000
 spring:
-  profiles: register1
+  profiles: dev1
   application:
     name: macro-pub-register-server
 eureka:
@@ -23,7 +23,7 @@ eureka:
 server:
   port: 9001
 spring:
-  profiles: register2
+  profiles: dev2
   application:
     name: macro-pub-register-server
 eureka:
