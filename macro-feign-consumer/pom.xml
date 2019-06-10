@@ -8,11 +8,11 @@
         <version>2.1.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>macro-test</groupId>
-    <artifactId>macro-test-provider</artifactId>
+    <groupId>macro-feign</groupId>
+    <artifactId>macro-feign-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>macro-test-provider</name>
-    <description>测试服务提供者</description>
+    <name>macro-feign-consumer</name>
+    <description>声明式服务调用</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -28,12 +28,13 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>${cloud.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
             <version>${cloud.version}</version>
         </dependency>
 
@@ -42,14 +43,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.54</version>
         </dependency>
-
     </dependencies>
 
     <dependencyManagement>

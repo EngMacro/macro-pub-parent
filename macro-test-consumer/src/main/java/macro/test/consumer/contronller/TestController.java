@@ -1,13 +1,13 @@
 package macro.test.consumer.contronller;
 
+import macro.test.consumer.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 /**
- * 描述
+ * 测试用的Controller
  *
  * @author: Macro
  * @mail liqh@txtws.com
@@ -16,10 +16,10 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class TestController {
     @Autowired
-    RestTemplate restTemplate;
+    TestService service;
 
     @RequestMapping(value = "/test-consumer", method = RequestMethod.GET)
     public String testController() {
-        return restTemplate.getForEntity("http://macro-test-provider:7000/test/hello", String.class).getBody();
+        return service.testService();
     }
 }
