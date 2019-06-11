@@ -1,14 +1,13 @@
 package macro.feign.consumer.contraller;
 
-import com.alibaba.fastjson.JSONObject;
-import macro.feign.consumer.interfaces.HelloService;
-import org.bouncycastle.cert.ocsp.Req;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+        import com.alibaba.fastjson.JSONObject;
+        import macro.feign.consumer.interfaces.FeignService;
+        import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.stereotype.Controller;
+        import org.springframework.web.bind.annotation.RequestBody;
+        import org.springframework.web.bind.annotation.RequestMapping;
+        import org.springframework.web.bind.annotation.RequestMethod;
+        import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 描述
@@ -21,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping(value = "/feign")
 public class FeignController {
     @Autowired
-    HelloService service;
+    FeignService service;
 
     @RequestMapping(value = "/test",method = RequestMethod.GET)
     @ResponseBody
